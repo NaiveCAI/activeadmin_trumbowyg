@@ -24,7 +24,7 @@
                         var options = '';
 
                         for (var lang in Prism.languages) {
-                            if (Prism.languages[lang].comment) {
+                            if (Prism.languages.hasOwnProperty(lang)) {
                                 options += '<option value="' + lang + '">' + lang + '</option>';
                             }
                         }
@@ -61,7 +61,13 @@
         langs: {
             en: {
                 highlight: 'Code syntax highlight'
-            }
+            },
+            pt_br: {
+                highlight: 'Realçar sintaxe de código'
+            },
+            ko: {
+                highlight: '코드 문법 하이라이트'
+            },
         },
         // Add our plugin to Trumbowyg registred plugins
         plugins: {
